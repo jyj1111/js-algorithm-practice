@@ -1,5 +1,5 @@
 function sol(num, arr) {
-  arr.unshift(0);
+  arr.unshift(Number.MIN_SAFE_INTEGER);
   const arr1 = arr.filter((item, idx) => item > arr[idx - 1]);
   return arr1;
 }
