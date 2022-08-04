@@ -8,4 +8,4 @@ function runInDelay(callback, seconds) {
 
 runInDelay(() => {
   console.log("타이머 완료");
-}, -1);
+}, 1);
