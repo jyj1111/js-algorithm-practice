@@ -1,8 +1,12 @@
 function sol(n, arr) {
-  let count = 0;
-  arr.sort((a, b) => a[1] - b[1]);
-  for (let i = 0; i < n; i++) {
-    count = 1;
+  arr.sort((a, b) => (a[1] === b[1] ? a[0] - b[0] : a[1] - b[1]));
+  let count = 1;
+  let m = 0;
+  for (let i = 1; i < n; i++) {
+    if (arr[m][1] <= arr[i][0]) {
+      count++;
+      m = i;
+    }
   }
   return count;
 }
