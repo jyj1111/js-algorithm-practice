@@ -4,6 +4,7 @@ function sol(m, arr) {
   let ch = Array.from({ length: n }, () => 0);
   let combination = Array.from({ length: m }, () => 0);
   function DFS(L) {
+    console.log(L, combination);
     if (L === m) {
       answer++;
       console.log(...combination);
