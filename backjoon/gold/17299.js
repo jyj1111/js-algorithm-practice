@@ -1,6 +1,5 @@
-/*
 const fs = require("fs");
-let input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");*/
+let input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 
 function sol(n, arr) {
   let arr1 = [];
@@ -13,11 +12,23 @@ function sol(n, arr) {
     }
     arr1.push(cnt);
   }
-  for (let k = 0; k < n; k++) {}
-  return arr1;
+  let arr2 = [];
+  for (let k = 0; k < n - 1; k++) {
+    let count = 0;
+    let set = -1;
+    for (let t = k + 1; t < n; t++) {
+      if (arr1[t] > arr1[k]) {
+        count++;
+        set = arr[t];
+        break;
+      }
+    }
+    arr2.push(set);
+  }
+  return arr2;
 }
-/*const n = input[0];
+const n = input[0];
 let arr = input[1].split(" ");
-arr = arr.map((item) => +item);*/
+arr = arr.map((item) => +item);
 
-console.log(sol(+7, [1, 1, 2, 3, 4, 2, 1]));
+console.log(sol(+n, arr));
