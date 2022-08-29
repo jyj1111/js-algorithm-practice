@@ -1,5 +1,5 @@
-/*const fs = require("fs");
-let input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");*/
+const fs = require("fs");
+let input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 function sol(n, arr) {
   let answer = Array(n).fill(-1);
   let stack = [];
@@ -13,10 +13,10 @@ function sol(n, arr) {
 
   return answer.join(" ");
 }
-/*
+
 let arr = input[1].split(" ").map((item) => +item);
 
-console.log(sol(+input[0], arr));*/
+console.log(sol(+input[0], arr));
 
-console.log(sol(4, [3, 5, 2, 7]));
-console.log(sol(4, [9, 5, 4, 8]));
+//console.log(sol(4, [3, 5, 2, 7]));
+//console.log(sol(4, [9, 5, 4, 8]));
